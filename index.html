@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrição & Introdução Alimentar - Pergunta e Resposta</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontes Orgânicas da Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="caixa-principal">
+        <header class="cabecalho">
+            <span class="tagline">Guia Especializado</span>
+            <h1>Introdução Alimentar com Acompanhamento Nutricional</h1>
+            <p class="subtitulo">Aprenda a importância do acompanhamento nutricional para o desenvolvimento saudável dos bebês.</p>
+        </header>
+
+        <!-- Seção Dinâmica de Perguntas -->
+        <section class="secao-interativa">
+            <div class="caixa-perguntas" id="caixaPerguntas">
+                <!-- A pergunta atual é inserida via JS -->
+            </div>
+
+            <div class="caixa-alternativas" id="caixaAlternativas">
+                <!-- As opções/perguntas para clicar são inseridas via JS -->
+            </div>
+        </section>
+
+        <!-- Seção do Resultado / Resposta Detalhada -->
+        <section class="caixa-resultado escondido" id="caixaResultado">
+            <div class="cartao-resposta">
+                <div class="icone-nutri">🌱</div>
+                <h2 id="tituloResposta">Resposta do Nutricionista</h2>
+                <div class="texto-resultado" id="textoResultado">
+                    <!-- Conteúdo explicativo da resposta -->
+                </div>
+
+                <div class="controles-audio">
+                    <button id="btnVoz" class="btn-voz">
+                        <span class="icone-play">🔊</span> Ouvir Resposta por I.A.
+                    </button>
+                    <span id="statusVoz" class="status-voz"></span>
+                </div>
+
+                <div class="bloco-referencia">
+                    <span class="rotulo-fonte">Fonte / Leitura recomendada:</span>
+                    <a id="linkNoticia" href="#" target="_blank" rel="noopener noreferrer" class="link-noticia">
+                        Ver artigo/notícia sobre este tópico →
+                    </a>
+                </div>
+
+                <button id="btnReiniciar" class="btn-reiniciar">← Fazer outra pergunta</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+/* =========================================================
+   PALETA NUTRI ORGANICA & VIBRANTE (TERRACOTA + SÁLVIA)
+   ========================================================= */
+:root {
+    /* Fundo com tom terroso suave e moderno */
+    --bg-fundo: #EFE6DD;               /* Areia/Terracota bem suave */
+    --bg-card: #2B4436;                /* Verde sálvia profundo para o cartão */
+    --bg-opcao: #365443;               /* Verde intermediário para botões */
+    --bg-opcao-hover: #436652;
+
+    /* Cores de Destaque */
+    --terracota-vibrante: #E26D5C;     /* Terracota/Coral chamativo e quente */
+    --terracota-hover: #C85848;
+    --amarelo-sol: #FFE1A8;            /* Amarelo suave para destaques e ícones */
+    --verde-menta: #90BE6D;            /* Verde vibrante para bordas e links */
+
+    /* Textos */
+    --texto-claro: #F7F5F0;            /* Off-white macio */
+    --texto-suave: #C2D3C8;            /* Verde pastel suave */
+    
+    /* Sombras e Bordas */
+    --borda-suave: rgba(144, 190, 109, 0.25);
+    --sombra-card: 0 16px 40px rgba(43, 68, 54, 0.25);
+
+    /* Fontes */
+    --fonte-titulo: 'Playfair Display', serif;
+    --fonte-corpo: 'Outfit', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-fundo);
+    /* Fundo dinâmico com formas orgânicas sutis */
+    background-image: 
+        radial-gradient(circle at 12% 18%, rgba(226, 109, 92, 0.18) 0%, transparent 40%),
+        radial-gradient(circle at 88% 82%, rgba(43, 68, 54, 0.15) 0%, transparent 40%);
+    background-attachment: fixed;
+    color: var(--texto-claro);
+    font-family: var(--fonte-corpo);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+/* CONTAINER PRINCIPAL */
+.caixa-principal {
+    width: 100%;
+    max-width: 720px;
+    background: var(--bg-card);
+    border: 2px solid var(--borda-suave);
+    border-radius: 28px;
+    padding: 45px 35px;
+    box-shadow: var(--sombra-card);
+}
+
+/* CABEÇALHO */
+.cabecalho {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.tagline {
+    display: inline-block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #2B4436;
+    font-weight: 700;
+    background: var(--amarelo-sol);
+    padding: 6px 18px;
+    border-radius: 50px;
+    margin-bottom: 14px;
+}
+
+.cabecalho h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 2.2rem;
+    color: var(--texto-claro);
+    margin-bottom: 12px;
+    line-height: 1.25;
+}
+
+.subtitulo {
+    color: var(--texto-suave);
+    font-size: 1.05rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+/* SEÇÃO DE PERGUNTAS E OPÇÕES */
+.caixa-perguntas {
+    font-family: var(--fonte-titulo);
+    font-size: 1.35rem;
+    text-align: center;
+    margin-bottom: 28px;
+    color: var(--amarelo-sol);
+}
+
+.caixa-alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.btn-opcao {
+    background: var(--bg-opcao);
+    color: var(--texto-claro);
+    border: 1px solid var(--borda-suave);
+    padding: 18px 24px;
+    border-radius: 18px;
+    font-size: 1.02rem;
+    font-family: var(--fonte-corpo);
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 400;
+}
+
+.btn-opcao:hover {
+    background: var(--bg-opcao-hover);
+    border-color: var(--verde-menta);
+    color: var(--amarelo-sol);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* CARD DE RESPOSTA (RESULTADO) */
+.escondido {
+    display: none;
+}
+
+.cartao-resposta {
+    background: var(--bg-opcao);
+    border: 1px solid var(--verde-menta);
+    padding: 36px;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    animation: surgimentoSuave 0.4s ease-out;
+}
+
+@keyframes surgimentoSuave {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.icone-nutri {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.cartao-resposta h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.65rem;
+    margin-bottom: 16px;
+    color: var(--amarelo-sol);
+}
+
+.texto-resultado {
+    font-size: 1.08rem;
+    line-height: 1.8;
+    color: var(--texto-claro);
+    margin-bottom: 28px;
+}
+
+/* REPRODUTOR DE VOZ I.A. */
+.controles-audio {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--borda-suave);
+}
+
+.btn-voz {
+    background: var(--terracota-vibrante);
+    color: #FFFFFF;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 14px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    font-family: var(--fonte-corpo);
+    box-shadow: 0 4px 15px rgba(226, 109, 92, 0.35);
+    transition: all 0.25s ease;
+}
+
+.btn-voz:hover {
+    background: var(--terracota-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(226, 109, 92, 0.5);
+}
+
+.status-voz {
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+    font-style: italic;
+}
+
+/* LINK DE NOTÍCIA E FONTE */
+.bloco-referencia {
+    margin-bottom: 28px;
+    background: rgba(0, 0, 0, 0.15);
+    padding: 16px 20px;
+    border-radius: 14px;
+    border-left: 4px solid var(--verde-menta);
+}
+
+.rotulo-fonte {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--texto-suave);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.link-noticia {
+    color: var(--verde-menta);
+    text-decoration: none;
+    font-size: 0.98rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.link-noticia:hover {
+    color: var(--amarelo-sol);
+    text-decoration: underline;
+}
+
+/* BOTÃO REINICIAR */
+.btn-reiniciar {
+    background: transparent;
+    border: 1px solid var(--borda-suave);
+    color: var(--texto-suave);
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: var(--fonte-corpo);
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-reiniciar:hover {
+    color: var(--texto-claro);
+    border-color: var(--verde-menta);
+    background: rgba(144, 190, 109, 0.1);
+}
